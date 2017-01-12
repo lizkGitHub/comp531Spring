@@ -28,10 +28,10 @@
 		<input type="checkbox" name="toppings" value="Onions">Onions
 	</p>
 
-	<button type="button" name="placeorder" 
-		onclick="return validateForm(this.form)">Place Order</button>
-	<button type="button" name="clear" 
-		onclick="clearForm(this.form)">Clear</button>
+	<input type="submit" name="placeorder" value="Place Order" 
+	onclick="return validateForm(this.form)">
+	<input type="reset" name="clear" value="Clear">
+	
 </form>
 </body>
 <script type="text/javascript">
@@ -75,34 +75,11 @@ function validateForm(form) {
         missedStr = missedStr + "phone ";
     }
     else if (!re.test(phone)){
-    	missedStr = "The phone number format should be 
-    	xxx-xxx-xxxx,\n" + missedStr;
+    	missedStr = "The phone number format should be xxx-xxx-xxxx,\n" + missedStr;
     }
     if (missedStr != "") {
     	alert(missedStr + "are required");
     	return false;
     }
-}
-
-function clearForm(form){
-	var frm_elements = form.elements;
-	for (i = 0; i < frm_elements.length; i++){
-	    field_type = frm_elements[i].type.toLowerCase();
-	    switch (field_type){
-	    	case "tel":
-		    case "text":
-		        frm_elements[i].value = "";
-		        break;
-		    case "radio":
-		    case "checkbox":
-		        if (frm_elements[i].checked)
-		        {
-		            frm_elements[i].checked = false;
-		        }
-		        break;
-		    default:
-		        break;
-	    }
-	}
 }
 </script>

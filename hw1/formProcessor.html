@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Pizza Order Form</title>
+	<meta name="keywords" content="HTML">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Processor Form HTML page">
+	<meta name="author" content="Zhaokang Li">
+</head>
+<script type="text/javascript">
+  var accountName = getUrlVars()["accountName"];
+  var displayName = getUrlVars()["displayName"];
+  var email = decodeURIComponent(getUrlVars()["email"]);
+  var zipcode = getUrlVars()["zipcode"];
+  var phone = getUrlVars()["phone"];
+  var birthDate = decodeURIComponent(getUrlVars()["birthDate"]);
+  var password = getUrlVars()["password"];
+  var timestamp = getLocalTime(getUrlVars()["timestamp"]);
+  function getLocalTime(nS) {     
+     return new Date(parseInt(nS)).toLocaleString().replace(/:\d{1,2}$/,' ');     
+  }
+  function getUrlVars() {
+  var vars = {};
+  var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+  vars[key] = value;
+  });
+  return vars;
+  }
+</script>
+<body>
+<h1>Processor From</h1>
+<table border="1">
+  <tr>
+    <td>account name</td>
+    <td><script>document.write(accountName);</script></td>
+  </tr>
+  <tr>
+    <td>display name</td>
+    <td><script>document.write(displayName);</script></td>
+  </tr>
+  <tr>
+    <td>email</td>
+    <td><script>document.write(email);</script></td>
+  </tr>
+  <tr>
+    <td>zipcode</td>
+    <td><script>document.write(zipcode);</script></td>
+  </tr>
+  <tr>
+    <td>phone number</td>
+    <td><script>document.write(phone);</script></td>
+  </tr>
+  <tr>
+    <td>birth date</td>
+    <td><script>document.write(birthDate);</script></td>
+  </tr>
+  <tr>
+    <td>password</td>
+    <td><script>document.write(password);</script></td>
+  </tr>
+  <tr>
+    <td>timestamp</td>
+    <td><script>document.write(timestamp);</script></td>
+  </tr>
+</table>
+
+</body>

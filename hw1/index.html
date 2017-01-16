@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Registration Page</title>
+	<meta name="keywords" content="HTML">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Registration Form HTML page">
+	<meta name="author" content="Zhaokang Li">
+</head>
+<body onload="setTimestamp()">
+<h1>Registration From</h1>
+<form id="registerForm" metnod="get" action="formProcessor.html">
+	<p>Account Name: <br><input type="text" name="accountName" ></p>
+	<p>Display Name(optional):<br><input type="text" name="displayName"></p>
+	<p>Email Address:<br><input type="email" name="email"></p>
+	<p>Phone Number: (example:123-123-1234)<br><input type="tel" 
+		name="phone" ></p>
+	<p>Date of Birth(mm/dd/yyyy):<br><input type="text" name="birthDate" ></p>
+	<p>Zipcode:<input type="text" name="zipcode"  pattern="\d*"></p>
+	<p>Password:<input type="password" name="password" ></p>
+	<p>Password Confirmation:<input type="password" name="pwconfirm" ></p>
+	<input type="hidden" id="timestamp" name="timestamp"/>
+	<button type="submit" name="submit" value="Submit" 
+        onclick="return validateForm(this.form)">Submit</button>
+	<button type="reset" name="clear">Clear</button>
+
+</form>
+</body>
+<script>
+function setTimestamp(){
+    document.getElementById("timestamp").value = new Date().getTime();
+}
+
+function validateForm(form) {
+
+    var name = form["accountName"].value;
+    var email = form["email"].value;
+    var zipcode = form["zipcode"].value;
+    var phone = form["phone"].value;
+    var birthDate = form["birthDate"].value;
+    var password = form["password"].value;
+    var pwconfirm = form["pwconfirm"].value;
+    var birthDate = form["birthDate"].value;
+    var timestamp = document.getElementById("timestamp").value;
+    //pattern for name
+    var reName = /^[a-zA-Z][a-zA-Z0-9]*$/
+    // pattern for phone number
+    var rePhone = /^\d{3}-\d{3}-\d{4}$/;
+    // pattern for email
+    var reEmail = /^\S+@\S+\.\S+$/;
+    // pattern for zipcode
+    var reZip = /(^\d{5}$)|(^\d{5}-\d{4}$)/;
+    // pattern for birth date
+    var reBirth = /^\d{2}[.-/]\d{2}[.-/]\d{4}$/;
+    // save all missed items
+    var missedStr = "";
+    if (name == null || name == "") {
+    	missedStr = missedStr + "Account name is required.\n";
+    }
+    else if (!reName.test(name)) {
+    	missedStr = "Account name is not valid. Account name can only be upper or lower case letters and numbers, but may not start with a number.\n" + missedStr;
+    }
+    if (email == null || email == "") {
+        missedStr = missedStr + "Email is required.\n";
+    }
+    else if (!reEmail.test(email)) {
+    	missedStr = missedStr + "The email is not valid.\n"
+    }
+    if (zipcode == null || zipcode == "") {
+        missedStr = missedStr + "Zipcode is required.\n";
+    }
+    else if (!reZip.test(zipcode)) {
+    	missedStr = "Zipcode is not valid and the format should be xxxxx or xxxxx-xxxx.\n" + missedStr;
+    }
+    if (birthDate == null || birthDate == ""){
+    	missedStr = missedStr + "BirthDate is required.\n";
+    }
+    else if (!reBirth.test(birthDate)) {
+    	missedStr = "The birthDate format should be mm/dd/yyyy or mm.dd.yyyy or mm-dd-yyyy.\n" + missedStr;
+    }
+    else {
+        var monthBirth = birthDate.substring(0, 2);
+        var dayBirth = birthDate.substring(3, 5);
+        var yearBirth = birthDate.substring(6, 10);
+        var timeNow = new Date(parseInt(timestamp)).toLocaleString();
+        
+        var yearNow = timeNow.split("/")[0];
+        var monthNow = timeNow.split("/")[1];
+        var dayNow = timeNow.split("/")[2].split(" ")[0];
+
+        if ((yearNow - yearBirth) < 18) {
+            missedStr = missedStr + "Only individuals 18 years of age or older on the day of registration are allowed to register.\n";
+        } 
+
+        else if ((yearNow - yearBirth == 18) && (monthNow - monthBirth < 0)) {
+            missedStr = missedStr + "Only individuals 18 years of age or older on the day of registration are allowed to register.\n";
+        }
+        else if ((yearNow - yearBirth == 18) && (monthNow - monthBirth == 0) 
+            && (dayNow - dayBirth < 0)) {
+            missedStr = missedStr + "Only individuals 18 years of age or older on the day of registration are allowed to register.\n";
+        }
+    }
+    if (phone == null || phone == "") {
+        missedStr = missedStr + "Phone number is required.\n";
+    }
+    else if (!rePhone.test(phone)) {
+    	missedStr = "The phone number format should be xxx-xxx-xxxx.\n" 
+        + missedStr;
+    }
+    if (password == null || password == "") {
+        missedStr = missedStr + "Password is required.\n";
+    }
+    if (pwconfirm == null || pwconfirm == "") {
+        missedStr = missedStr + "Password confirmation is required.\n";
+    }
+    if (password != pwconfirm) {
+    	missedStr = missedStr + "The password is not the same as password confirmation.\n";	
+    }
+    if (missedStr != "") {
+    	alert(missedStr);
+    	return false;
+    }
+}
+</script>

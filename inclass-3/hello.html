@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Hello HTML!</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Zhaokang Li">
+</head>
+
+<body>
+
+<table border="1">
+	<tr><td>Athenian</td><td>Owl</td></tr>
+	<tr><td colspan="2"><img src="http://explore.rice.edu/uploadedImages/Explore/Welcome_to_Rice/riceacademicseal1.jpg"></td></tr>
+</table>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<ul>
+	<li><a href="http://www.rice.edu">Rice</a></li>
+	<li><a href="http://www.chron.com">Houston Chronicle</a></li>
+	<li><a href="http://www.twitter.com">Twitter</a></li>
+	<li><a href="http://www.twosigma.com">TwoSigma</a></li>
+</ul>
+
+<textarea id="message" rows="10" cols="50">
+
+
+ --- Enter your message here --- 
+
+
+</textarea>
+<br>
+<button type="button" onclick="clearText()">clear</button>
+<br>
+<button type="button" onclick="pause()">pause</button>
+<button type="button" onclick="resume()">resume</button>
+<span id="indicator">Seconds</span>
+<br>
+<script>
+function clearText() {	
+	document.getElementById('message').innerHTML="";
+	
+}
+
+function pause() {
+	clearTimeout(t);
+}
+
+function resume() {
+	setTimeout("timedCount()",1000);
+}
+
+function timedCount()
+{
+	document.getElementById('indicator').innerHTML = count;
+	count = count - 1;
+	if (count < 0) {
+		count = 15;
+    	clearTimeout(t);   
+		window.location.href='hello.html'; 
+    } 
+	t = setTimeout("timedCount()",1000);
+}
+var t;
+var count = 15;	
+timedCount();
+setTimeout("alert('the page will redirect when the counter reaches zero')",5000);
+</script>
+</body>
+</html>

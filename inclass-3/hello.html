@@ -46,10 +46,13 @@ function clearText() {
 
 function pause() {
 	clearTimeout(t);
+	t = null;
 }
 
 function resume() {
-	setTimeout("timedCount()",1000);
+	if (t == null) {
+		setTimeout("timedCount()",1000);
+	}
 }
 
 function timedCount()
@@ -59,7 +62,7 @@ function timedCount()
 	if (count < 0) {
 		count = 15;
     	clearTimeout(t);   
-		window.location.href='hello.html'; 
+		window.location.href='http://www.clear.rice.edu/comp431/sample/hello.html'; 
     } 
 	t = setTimeout("timedCount()",1000);
 }

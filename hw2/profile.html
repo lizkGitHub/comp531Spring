@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>User Feed</title>
+	<meta name="keywords" content="HTML">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="profile page">
+	<meta name="author" content="Zhaokang Li">
+    <script src="profile.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>  
+<ul>
+  <li><a class="active" href="main.html">UserFeed</a></li>
+</ul>
+<h1>My Profile</h1>
+
+<table class="table" align="center">
+  <tbody>
+    <tr>
+      <td>display name</td>
+      <td><input type="text" id="newname"></td>
+      <td id="name">Lucy</td>   
+    </tr>
+    <tr class="email">
+      <td>email address</td>
+      <td><input type="email" id="newemail"></td>
+      <td id="email">lucy@gmail.com</td>   
+    </tr>
+    <tr class="phone">
+      <td>phone number</td>
+      <td><input type="tel" id="newphone" placeholder="xxx-xxx-xxxx"></td>
+      <td id="phone">111-111-1111</td>   
+    </tr>
+    <tr class="zipcode">
+      <td>zipcode</td>
+      <td><input type="text" id="newzipcode" placeholder="five digit number"></td>
+      <td id="zipcode">77777</td>   
+    </tr>
+    <tr>
+      <td>password</td>
+      <td><input type="password" id="newpassword"></td>
+      <td id="password">101010</td>   
+    </tr>
+    <tr>
+      <td>password confirmation</td>
+      <td><input type="password" id="newpwconfirm"></td>
+      <td id="pwconfirm">101010</td>   
+    </tr>
+    <tr>
+      <td></td>
+      <td><input type="button" id="submit" class="button" value="Submit"></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<div id="userInfo" style="display: none;">
+  <p id="infoText"></p>
+</div>
+</body>

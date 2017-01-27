@@ -1,0 +1,94 @@
+/* style sheet for main.html and profile.html */
+body{
+  font:1.2em normal Arial,sans-serif;
+  color:#34495E;
+}
+
+h1{
+  text-align:CENTER;
+  text-transform:uppercase;
+  letter-spacing:-2px;
+  font-size:2.5em;
+  margin:20px 0;
+}
+
+.container{
+  width:100%;
+  margin:auto;
+}
+
+.table{
+  border-collapse:collapse;
+  border:2px solid #1ABC9C;
+  /*width:100%;*/
+}
+
+.table thead{
+  background:#1ABC9C;
+  color:white;
+}
+
+th{
+  text-align:left;
+  padding:5px 0;
+}
+
+td{
+  text-align:left;
+  padding:5px 0;
+}
+
+tbody tr:nth-child(even){
+  background:#ECF0F1;
+}
+
+tbody td:nth-child(even){
+  border-left: solid 1px #1ABC9C;
+}
+
+tbody td:hover{
+background:#BDC3C7;
+  color:#FFFFFF;
+}
+
+.fixed{
+  top:0;
+  position:fixed;
+  width:auto;
+  display:none;
+  border:none;
+}
+
+.pic{
+  width: 300px;
+  height: 100px;
+}
+.button{
+      background-color:#1ABC9C;
+      color:white;
+      width:50px;
+      height:25px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}

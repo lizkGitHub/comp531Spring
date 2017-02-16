@@ -1,3 +1,5 @@
 node_modules
 .eslintcache
 bundle.js
+.DS_Store
+

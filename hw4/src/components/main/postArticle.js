@@ -10,6 +10,10 @@ const PostArticle = ({addArticle, article}) => {
         addArticle(articleText)
     }
 
+    const _clear = () => {
+        articleText.value = ""
+    }
+
     return (
     <div className="row">
         <div className="col-sm-12">
@@ -20,7 +24,7 @@ const PostArticle = ({addArticle, article}) => {
                             ref={ (node) => articleText = node } placeholder="share..."></textarea><br/>
                             <input type="file" className="form-control" id="uploadPhoto" name="upload a photo"></input>
                         </div>
-                        <button type="reset" className="btn btn-primary btn-sm col-sm-offset-10">Cancel</button>
+                        <button type="reset" onClick={_clear} className="btn btn-primary btn-sm col-sm-offset-10">Cancel</button>
                         <button type="button" className="btn btn-primary btn-sm" onClick={ _addArticle }> Post </button>
                     <ErrAddArticle/>
                 </div>

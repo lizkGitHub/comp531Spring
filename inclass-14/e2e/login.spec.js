@@ -41,7 +41,7 @@ describe('Test Dummy Server Example Page', () => {
                 }))
             // .sendKeys(the old headline message)
             // verify the headline is updated
-            .then(findId('oldHeadline').sendKeys(oldHeadline))
+            .then(findId('newHeadline').sendKeys(oldHeadline))
             .then(findId('headline').click())
             .then(sleep(2000))
             // verify the headline is updated

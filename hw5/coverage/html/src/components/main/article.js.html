@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/main/article.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/components/main/</a> article.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">53.57% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>15/28</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">23.53% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>4/17</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">11.11% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">52.63% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>10/19</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'
+import { connect } from 'react-redux'
+&nbsp;
+import { editArticle  } from './articleAction'
+import { toggleComments, addComment} from './commentAction'
+import Comment from './comment'
+export const Article = <span class="fstat-no" title="function not covered" >({ <span class="cstat-no" title="statement not covered" >_id, author, date, text, img, btnEditValue, btnAddCommentValue, comments, showComments, editArticle, addComment, toggleComments}) =&gt; {</span></span>
+    
+    let <span class="cstat-no" title="statement not covered" >showCommentBtn = "ShowComment"</span>
+    let <span class="cstat-no" title="statement not covered" >hideCommentBtn = "HideComment"</span>
+    let <span class="cstat-no" title="statement not covered" >commentBtn = (showComments===true ? hideCommentBtn : showCommentBtn)</span>
+    const <span class="cstat-no" title="statement not covered" >_toggleComments = <span class="fstat-no" title="function not covered" >() =&gt; {</span></span>
+        return <span class="cstat-no" title="statement not covered" >toggleComments(_id, !showComments)</span>
+    }
+    return (
+<span class="cstat-no" title="statement not covered" >        &lt;div className="panel panel-default"&gt;</span>
+            &lt;div className="panel-heading"&gt;
+            &lt;div className="card-user"&gt;            
+            &lt;span&gt;&lt;a href="#" className="lead card-user-name"&gt;{author}&lt;/a&gt;
+            &lt;span className="glyphicon glyphicon-pencil" aria-hidden="false"&gt;&lt;/span&gt;
+            &lt;span className="small timestamp"&gt;{date}&lt;/span&gt;&lt;/span&gt;
+            { btnEditValue ? 
+                &lt;button className="btn btn-sm btn-default pull-right" type="button" 
+                id="editArticle" onClick={ editArticle }&gt;edit&lt;/button&gt;
+            : null}
+            &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div className="panel-body"&gt;
+            &lt;p className="card-user-content"&gt;{text}&lt;/p&gt;
+            { img!==null &amp;&amp; img!=='' &amp;&amp; img!==undefined ? &lt;img  className="card-img" src={img}/&gt; : null }
+&nbsp;
+            &lt;br/&gt;
+            { btnAddCommentValue ? 
+                &lt;form className="form"&gt;
+                &lt;div className="input-group text-center"&gt;
+                &lt;input className="form-control input-sm" id="commentText" placeholder="Comment..." type="text"/&gt;
+                    &lt;span className="input-group-btn"&gt;&lt;button id="addComment" className="btn btn-sm btn-primary" 
+                    type="button" onClick={ addComment }&gt;Comment&lt;/button&gt;&lt;/span&gt;
+                    &lt;span className="input-group-btn"&gt;&lt;button id="showComment" className="btn btn-sm btn-primary" 
+                    type="button" onClick={ _toggleComments }&gt;{commentBtn}&lt;/button&gt;&lt;/span&gt;
+                &lt;/div&gt;  
+                &lt;/form&gt;
+            : null}
+&nbsp;
+            &lt;div&gt;
+                {showComments ? comments.map(<span class="fstat-no" title="function not covered" >c =&gt;</span>
+<span class="cstat-no" title="statement not covered" >                    &lt;Comment author={c.author} key={c.commentId} date={c.date} avatar={c.avatar} </span>
+                    articleId={c._id} text={c.text} /&gt;
+                ) : null}
+            &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    );  
+}
+&nbsp;
+const mapStateToProps = <span class="fstat-no" title="function not covered" >(state, ownProps )=&gt; (<span class="cstat-no" title="statement not covered" >{ </span></span>
+		_id: ownProps._id, author: ownProps.author, date: ownProps.date, text: ownProps.text, img: ownProps.img, 
+        btnEditValue: state.main.btnEditArticle, btnAddCommentValue: state.main.btnAddCommentValue
+		});
+const mapDispatchToProps = <span class="fstat-no" title="function not covered" >dispatch =&gt; (<span class="cstat-no" title="statement not covered" >{ editArticle: <span class="fstat-no" title="function not covered" >() =&gt; <span class="cstat-no" title="statement not covered" >dispatch(editArticle()), </span></span></span></span>
+										  addComment: <span class="fstat-no" title="function not covered" >() =&gt; <span class="cstat-no" title="statement not covered" >dispatch(addComment()),</span></span>
+                                        toggleComments: <span class="fstat-no" title="function not covered" >(_id, showComments) =&gt; <span class="cstat-no" title="statement not covered" >dispatch(toggleComments(_id, </span></span>
+                                        showComments))});
+&nbsp;
+export default connect(mapStateToProps, mapDispatchToProps)(Article);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Mar 22 2017 21:31:04 GMT-0500 (CDT)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

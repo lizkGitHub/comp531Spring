@@ -12,13 +12,11 @@ var cookieKey = 'sid'
 const register = (req, res) => {
 	let username = req.body.username;
 	let password = req.body.password;
-	console.log(username)
 	const user = {username}
 	user.salt = 'Add Salt' + Math.random().toString()
 	user.hash = md5(user.salt + password);
 	User.users.push(user);
 	const msg = {username : username, result : "success"}	
-	console.log(msg)
 	res.send(msg)
 	// res.send({users: [{username: username, salt: salt, h1: h1}]});
 }
@@ -51,7 +49,6 @@ const getUser = (username) => {
 function login(req, res) {
 	var username = req.body.username
 	var password = req.body.password
-	console.log(username)
 	if (!username || !password) {
 		res.sendStatus(400)
 		return

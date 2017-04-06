@@ -1,0 +1,87 @@
+
+
+.img-responsive {
+   height:250px;
+   width:600px;
+}
+
+.center {
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-circle {
+   margin-top:18px;
+   height:70px;
+   width:70px;
+}
+
+.panel-default .panel-heading {
+  background-color:#f9fafb;
+  color:#6C6666;
+}
+
+.friend-list-info {
+  text-align: center;
+}
+
+.well-list{
+  background-color:#f9fafb;
+  color:#555555;
+}
+
+.card-user-name {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.card-img {
+  height:150px;
+  width:250px;
+  
+}
+.glyphicon-pencil {
+	margin-left: 10px;
+}
+
+.btn-primary,.label-primary,.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus  {
+	background-color:#3B5999;
+    color:#fffffe;
+}
+.btn-default {
+    color:#666666;
+    text-shadow:0 0 1px rgba(0,0,0,.3);
+}
+
+.img-user-head {
+	width: 200px;
+	height: 200px;
+	margin-bottom: 10px;
+}
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    display: table;
+    margin: 0 auto;
+
+}
+
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+
+.commentText {
+    font-size: 13px;
+}
+

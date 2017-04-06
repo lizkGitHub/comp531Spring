@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/main/followerAction.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/components/main/</a> followerAction.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">28.81% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>17/59</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">12.5% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>1/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">8.33% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/24</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">24.07% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>13/54</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">3 statements</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { resource } from './../../actions'
+import {getArticles} from './articleAction'
+export const deleteFollower = <span class="fstat-no" title="function not covered" >(delUser) =&gt; {</span>
+    return (<span class="cstat-no" title="statement not covered" >{ type: 'deleteFollower', delUser: delUser});</span>
+}
+&nbsp;
+export const removeFollower = <span class="fstat-no" title="function not covered" >(userId) =&gt; {</span>
+    return <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(dispatch, getState) =&gt; {</span></span>
+        const <span class="cstat-no" title="statement not covered" >endpoint = `following/${userId}`</span>
+        resource(<span class="cstat-no" title="statement not covered" >'DELETE', endpoint).then (<span class="fstat-no" title="function not covered" >(r) =&gt; {</span></span>
+            const <span class="cstat-no" title="statement not covered" >idList = r.following</span>
+            // get the previous followings state
+            const {<span class="cstat-no" title="statement not covered" >followers} = getState().main</span>
+&nbsp;
+            if (<span class="cstat-no" title="statement not covered" >idList.length !== followers.length - 1) {</span>
+                return
+            }
+            dispatch(<span class="cstat-no" title="statement not covered" >clearFollowerArticle())</span>
+            dispatch(<span class="cstat-no" title="statement not covered" >getArticles(r.username))</span>
+            dispatch(<span class="cstat-no" title="statement not covered" >getFollowings(r.username))</span>
+            dispatch(<span class="cstat-no" title="statement not covered" >deleteFollower(userId))</span>
+        }).catch(<span class="fstat-no" title="function not covered" >(err) =&gt; {</span>
+            dispatch(<span class="cstat-no" title="statement not covered" >{type: "addFollowerError", data:err})</span>
+        })
+    }
+}
+&nbsp;
+export const putFollowing = <span class="fstat-no" title="function not covered" >(userId) =&gt; {</span>
+    return <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(dispatch, getState) =&gt; {</span></span>
+        const <span class="cstat-no" title="statement not covered" >endpoint = `following/${userId}`</span>
+        resource(<span class="cstat-no" title="statement not covered" >'PUT', endpoint).then (<span class="fstat-no" title="function not covered" >(r) =&gt; {</span></span>
+            const <span class="cstat-no" title="statement not covered" >idList = r.following</span>
+            // get the previous followings state
+            const {<span class="cstat-no" title="statement not covered" >followers} = getState().main</span>
+            if (<span class="cstat-no" title="statement not covered" >idList.indexOf(userId) === -1) {</span>
+                dispatch(<span class="cstat-no" title="statement not covered" >{type : 'addFollowerError', data : 'User is invalid'})</span>
+                return
+            } else <span class="cstat-no" title="statement not covered" >if (followers.findIndex(<span class="fstat-no" title="function not covered" >x =&gt; <span class="cstat-no" title="statement not covered" >x.username === userId) !== -1) {</span></span></span>
+                dispatch(<span class="cstat-no" title="statement not covered" >{type : 'addFollowerError', data : 'User has already been your following'})</span>
+                return
+            }
+            dispatch(<span class="cstat-no" title="statement not covered" >getFriendProfile(userId))</span>
+            dispatch(<span class="cstat-no" title="statement not covered" >getArticles(userId))</span>
+        }).catch(<span class="fstat-no" title="function not covered" >(err) =&gt; {</span>
+            dispatch(<span class="cstat-no" title="statement not covered" >{type: "addFollowerError", data:err})</span>
+        })
+    }
+}
+&nbsp;
+export const addFollower = <span class="fstat-no" title="function not covered" >(follower) =&gt; {    </span>
+    return (<span class="cstat-no" title="statement not covered" >{ type: 'addFollower', follower});</span>
+}
+&nbsp;
+export const clearFollowerArticle = () =&gt; {
+    return ({ type: 'clearFollowerArticle'})
+}
+&nbsp;
+export const getFollowings = (userId) =&gt; {
+    
+    c</span>onst endpoint = (userId) ? `following/${userId}` : <span class="branch-1 cbranch-no" title="branch not covered" >'following'
+    return <span class="fstat-no" title="function not covered" >(dispatch) =&gt; {</span>
+        resource(<span class="cstat-no" title="statement not covered" >'GET', endpoint, )</span>
+            .then(<span class="fstat-no" title="function not covered" >(r) =&gt; {</span>
+                const <span class="cstat-no" title="statement not covered" >idList = r.following</span>
+                const <span class="cstat-no" title="statement not covered" >pList = idList.map(<span class="fstat-no" title="function not covered" >(id) =&gt; {</span></span>
+                    dispatch(<span class="cstat-no" title="statement not covered" >getFriendProfile(id))</span>
+                    dispatch(<span class="cstat-no" title="statement not covered" >getArticles(id))</span>
+                })
+&nbsp;
+            })
+            .catch(<span class="fstat-no" title="function not covered" >(err) =&gt; {</span>
+                dispatch(<span class="cstat-no" title="statement not covered" >{type: "addFollowerError", data:err})</span>
+            })
+    }
+}
+&nbsp;
+export const getFriendProfile = <span class="fstat-no" title="function not covered" >(userId) =&gt; {</span>
+    const <span class="cstat-no" title="statement not covered" >friend = {username : userId}</span>
+    const <span class="cstat-no" title="statement not covered" >p1 = resource('GET', 'avatars' + '/' + userId)</span>
+        .then(<span class="fstat-no" title="function not covered" >(r) =&gt; {</span>
+                friend.<span class="cstat-no" title="statement not covered" >avatar = r.avatars[0].avatar</span>
+            }
+        )
+        .catch(<span class="fstat-no" title="function not covered" >(err) =&gt; {</span>
+            dispatch(<span class="cstat-no" title="statement not covered" >{type: "addFollowerError", data:err})</span>
+        })
+    const <span class="cstat-no" title="statement not covered" >p2 = resource('GET', 'headlines' + '/' + userId)</span>
+        .then(<span class="fstat-no" title="function not covered" >(r) =&gt; {</span>
+                friend.<span class="cstat-no" title="statement not covered" >headline = r.headlines[0].headline</span>
+            }
+        )
+        .catch(<span class="fstat-no" title="function not covered" >(err) =&gt; {</span>
+            dispatch(<span class="cstat-no" title="statement not covered" >{type: "addFollowerError", data:err})</span>
+        })
+    return <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(dispatch) =&gt; {</span></span>
+        Promise.<span class="cstat-no" title="statement not covered" >all([p1, p2]).then(<span class="fstat-no" title="function not covered" >() =&gt; {</span></span>
+            dispatch(<span class="cstat-no" title="statement not covered" >addFollower(friend))</span>
+        })
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Mar 22 2017 21:31:04 GMT-0500 (CDT)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

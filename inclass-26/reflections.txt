@@ -1,0 +1,19 @@
+• What did you hope to learn but did not?
+I learned all I wanted to learn.
+
+• What did you really enjoy learning about?
+I enjoyed learning how to become a good full-stack developer.
+
+
+• What worked well in the course? and how?
+The project is well divided. So we can finish a part of in each assignment. It makes me feel sense of accomplishment every time I add a feature to the project. 
+
+• What did not work well in the course and how might it be improved?
+Because the last several in-class practice can be finished with the assignment project, it is easy to integrate these features to finish HW7. But HW7 doesn’t require us to do that(such as redis). Some of us worried whether we would get points deducted for implementing.
+
+• What could I have done to help you more, presentation of material, design of in class
+exercises, goals of projects – and be specific please!
+Some in-class exercise needs more time to finish especially the first few, such as in-class6.
+
+• Anything else you like to say?
+This course really needs students to learn many things after class. But it worths the efforts.

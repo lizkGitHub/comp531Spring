@@ -1,0 +1,9 @@
+1. Which presentation was the most polished and delivered, and why?
+The presentation about React Native. Because she clearly introduced what is React Native and why we need it. The speaker had a loud voice.
+
+2. Which topic did you learn the most from and what did you learn?
+GraphQL vs REST
+I learned another tool to communicate between client and data. Using GraphQL can get a lot of related data in one request, and can save a lot of time on HTTP respond. It is useful for APIs which need high query capability. 
+
+3. Which talk did you like the best and why?
+The presentation about Ads and Cookies, because the presentation style is good. This topic is interesting and he uses examples in real life to make it easier to understand.
